@@ -1,0 +1,27 @@
+# This dependencies for the docker container & really i need this while deployment also
+# Core Python Data Science Stack
+numpy==1.26.4
+pandas==2.2.2
+scikit-learn==1.5.2
+scipy==1.14.1
+
+# Visualization (optional if your API doesn’t need plots)
+matplotlib==3.9.2
+seaborn==0.13.2
+
+# ML Boosting libraries
+xgboost==2.1.1
+catboost==1.2.7
+lightgbm==4.5.0
+
+# Web Framework (choose one)
+flask==3.0.3
+# or FastAPI (for async API)
+fastapi==0.115.0
+uvicorn==0.30.6
+
+# Data validation
+pydantic==2.9.2
+
+# Production server
+gunicorn==23.0.0
