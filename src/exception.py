@@ -2,7 +2,6 @@
 import sys 
 from src.logger import logging
 
-
 def error_message_detial(error,error_detail:sys): 
     """ this function taks error and its message from the python interpreter and 
     return in the well formatted form message okkkay , her sys is use for the accessing the error and message

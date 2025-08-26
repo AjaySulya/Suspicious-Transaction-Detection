@@ -25,3 +25,7 @@ pydantic==2.9.2
 
 # Production server
 gunicorn==23.0.0
+
+
+dill==0.3.8
+networkx==3.5
