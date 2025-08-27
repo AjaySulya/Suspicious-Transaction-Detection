@@ -76,3 +76,13 @@ class DataIngestion:
         except Exception as e:
             raise CustomException(e,sys) 
             
+            
+if __name__ == "__main__":
+    logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
+
+    try:
+        obj = DataIngestion()
+        train_path, test_path = obj.initiate_data_ingestion(time_based_split=True, test_frac=0.3)
+        print(f"✅ Data Ingestion Completed.\nTrain file saved at: {train_path}\nTest file saved at: {test_path}")
+    except Exception as e:
+        print(f"❌ Error occurred during data ingestion: {e}")            

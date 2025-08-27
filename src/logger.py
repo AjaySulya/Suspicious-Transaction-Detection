@@ -4,7 +4,7 @@ import os
 from datetime import datetime
 
 # Create the log file with the specific format current time format (month,day,year:hour,minute,second)
-LOG_FILE = f"{datetime.now().strtime('%m_%d_%Y_%H_%M_%S')}.log"
+LOG_FILE = f"{datetime.now().strftime('%m_%d_%Y_%H_%M_%S')}.log"
 # Log path for the save this created file okkay or whenever logs are created i store this in this path
 logs_path = os.path.join(os.getcwd(),"logs",LOG_FILE)  # This specify the path not create
 # here first para fetch the current directory (SUSPICIOUS TRANSACTION DETECTION) ,second create the folder , and third inside this logs folder create the logs file okkay

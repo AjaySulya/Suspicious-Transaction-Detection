@@ -8,12 +8,14 @@ def error_message_detial(error,error_detail:sys):
     the python interpreter and
     runtime environment 
     """
-    _,_,exc_tb = error_detail.exc_info() # This return 3 parameter
-    file_name = exc_tb.tb_frame.f_code.co_file_name # extracting the file name
-    error_message = f"Error Occurred in Script : [{file_name}] at line number: [{exc_tb.tb_lineno}] with messsage [{str(error)}]"
-    
+    _, _, exc_tb = sys.exc_info()
+    file_name = exc_tb.tb_frame.f_code.co_filename
+    error_message = (
+        f"Error Occurred in Script: [{file_name}] "
+        f"at line number: [{exc_tb.tb_lineno}] "
+        f"with message: [{str(error)}]"
+    )
     return error_message
-
 class CustomException(Exception):
     """ Custom Exception class that inherited from the build in class Exception class. 
     It formats the error message using the error_message_detial function 
